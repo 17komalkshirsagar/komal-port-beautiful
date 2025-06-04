@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -37,7 +38,7 @@ type LoginFormValues = z.infer<typeof loginSchema>;
 export default function AdminPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  
+
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -48,7 +49,7 @@ export default function AdminPage() {
 
   const onSubmit = (data: LoginFormValues) => {
     setIsSubmitting(true);
-    
+
     // Simulate login (frontend only, no actual authentication)
     setTimeout(() => {
       if (data.email === "admin@example.com" && data.password === "password123") {
@@ -96,10 +97,10 @@ export default function AdminPage() {
                         <FormControl>
                           <div className="relative">
                             <Mail className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
-                            <Input 
-                              placeholder="admin@example.com" 
-                              className="pl-10" 
-                              {...field} 
+                            <Input
+                              placeholder="admin@example.com"
+                              className="pl-10"
+                              {...field}
                             />
                           </div>
                         </FormControl>
@@ -116,11 +117,11 @@ export default function AdminPage() {
                         <FormControl>
                           <div className="relative">
                             <Lock className="absolute left-3 top-2.5 h-5 w-5 text-muted-foreground" />
-                            <Input 
-                              type="password" 
-                              placeholder="••••••••" 
-                              className="pl-10" 
-                              {...field} 
+                            <Input
+                              type="password"
+                              placeholder="••••••••"
+                              className="pl-10"
+                              {...field}
                             />
                           </div>
                         </FormControl>

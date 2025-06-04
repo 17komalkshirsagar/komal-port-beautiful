@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -51,7 +52,7 @@ export default function AdminDashboardPage() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  
+
   // Sample projects data
   const [projects, setProjects] = useState<Project[]>([
     {
@@ -111,10 +112,10 @@ export default function AdminDashboardPage() {
 
   const saveProject = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
-    
+
     const newProject = {
       id: selectedProject ? selectedProject.id : Date.now(),
       title: formData.get("title") as string,
@@ -124,7 +125,7 @@ export default function AdminDashboardPage() {
       liveUrl: formData.get("liveUrl") as string,
       githubUrl: formData.get("githubUrl") as string,
     };
-    
+
     if (selectedProject) {
       // Update existing project
       setProjects(projects.map(p => p.id === selectedProject.id ? newProject : p));
@@ -140,7 +141,7 @@ export default function AdminDashboardPage() {
         description: `"${newProject.title}" has been added.`,
       });
     }
-    
+
     setIsDialogOpen(false);
   };
 
@@ -212,7 +213,7 @@ export default function AdminDashboardPage() {
                               <DropdownMenuItem onClick={() => handleEditProject(project)}>
                                 <Edit className="mr-2 h-4 w-4" /> Edit
                               </DropdownMenuItem>
-                              <DropdownMenuItem 
+                              <DropdownMenuItem
                                 onClick={() => handleDeleteProject(project)}
                                 className="text-destructive focus:text-destructive"
                               >
@@ -238,7 +239,7 @@ export default function AdminDashboardPage() {
                 {selectedProject ? "Edit Project" : "Add New Project"}
               </DialogTitle>
               <DialogDescription>
-                {selectedProject 
+                {selectedProject
                   ? "Update the project information below."
                   : "Fill in the details for the new project."
                 }
@@ -327,14 +328,14 @@ export default function AdminDashboardPage() {
               </p>
             </div>
             <DialogFooter className="mt-4">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 onClick={() => setIsDeleteDialogOpen(false)}
               >
                 Cancel
               </Button>
-              <Button 
-                variant="destructive" 
+              <Button
+                variant="destructive"
                 onClick={confirmDelete}
               >
                 Delete

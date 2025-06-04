@@ -1,8 +1,8 @@
 "use client";
+import React from "react";
 
 import { motion } from "framer-motion";
-import { BrainCircuit, Code, Database, Layout, Smartphone, Server } from "lucide-react";
-
+import { BrainCircuit, Code, Database, Layout, Server } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -72,7 +72,7 @@ export default function SkillsPage() {
           subtitle="Technologies I work with"
         />
 
-        <div className="mt-12 grid gap-8">
+        {/* <div className="mt-12 grid gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
@@ -110,7 +110,7 @@ export default function SkillsPage() {
               </Card>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -132,7 +132,7 @@ export default function SkillsPage() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-8 md:grid-cols-3">
+              {/* <div className="grid gap-8 md:grid-cols-3">
                 <div className="rounded-lg border bg-card p-4 shadow-sm">
                   <h3 className="text-lg font-semibold">Continuous Learning</h3>
                   <p className="mt-2 text-sm text-muted-foreground">
@@ -142,8 +142,10 @@ export default function SkillsPage() {
                 <div className="rounded-lg border bg-card p-4 shadow-sm">
                   <h3 className="text-lg font-semibold">Hands-On Projects</h3>
                   <p className="mt-2 text-sm text-muted-foreground">
-                    I believe in learning by doing, so I frequently work on side projects to experiment with new technologies and frameworks.
+                    I regularly take online courses and follow industry blogs to stay updated with the latest trends and technologies.
                   </p>
+
+
                 </div>
                 <div className="rounded-lg border bg-card p-4 shadow-sm">
                   <h3 className="text-lg font-semibold">Developer Community</h3>
@@ -151,7 +153,30 @@ export default function SkillsPage() {
                     I actively participate in developer communities, attend meetups, and contribute to open-source projects when possible.
                   </p>
                 </div>
+              </div> */}
+              <div className="grid gap-8 md:grid-cols-3">
+                <div className="rounded-lg border bg-card p-4 shadow-sm">
+                  <h3 className="text-lg font-semibold">Continuous Learning</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    I regularly take online courses and follow industry blogs to stay updated with the latest trends and technologies.
+                  </p>
+                </div>
+
+                <div className="rounded-lg border bg-card p-4 shadow-sm">
+                  <h3 className="text-lg font-semibold">Hands-On Projects</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    I build real-world projects to practice and reinforce my learning.
+                  </p>
+                </div> {/* ✅ You were missing this line */}
+
+                <div className="rounded-lg border bg-card p-4 shadow-sm">
+                  <h3 className="text-lg font-semibold">Developer Community</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    I actively participate in developer communities, attend meetups, and contribute to open-source projects when possible.
+                  </p>
+                </div>
               </div>
+
             </CardContent>
           </Card>
         </motion.div>

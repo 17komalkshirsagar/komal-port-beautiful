@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, Download, Github, LinkedinIcon } from "lucide-react";
+import React from "react";
 
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/ui/section-heading";

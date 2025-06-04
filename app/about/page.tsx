@@ -3,6 +3,7 @@ import km from "./../image/komal.jpg"
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, GraduationCap, Mail, MapPin, Phone, User } from "lucide-react";
+import React from "react";
 
 import SectionHeading from "@/components/ui/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
@@ -61,22 +62,25 @@ export default function AboutPage() {
               <TabsContent value="bio" className="mt-6 space-y-4">
                 <h3 className="text-2xl font-bold">Hello There!</h3>
                 <p className="text-muted-foreground">
-                  I'm Komal Kshirsagar, a MERN Stack Developer based in Chhatrapati Sambhajinagar,
+                  I&apos;m Komal Kshirsagar, a MERN Stack Developer based in Chhatrapati Sambhajinagar,
                   Maharashtra. With a strong foundation in web development, I specialize in creating
                   responsive and user-friendly web applications.
                 </p>
+
                 <p className="text-muted-foreground">
                   My journey in web development began during my MCA studies where I developed
                   a passion for creating elegant solutions to complex problems. Since then,
-                  I've worked on various projects ranging from e-commerce platforms to real-time
+                  I&apos;ve worked on various projects ranging from e-commerce platforms to real-time
                   communication applications.
                 </p>
+
                 <p className="text-muted-foreground">
-                  Currently working at Matic UI, I've had the opportunity to work on cutting-edge
+                  Currently working at Matic UI, I&apos;ve had the opportunity to work on cutting-edge
                   projects including a Medical Diagnostic App and a SaaS Property Management Platform.
                   I enjoy collaborating with teams and clients to deliver high-quality products that
                   exceed expectations.
                 </p>
+
               </TabsContent>
               <TabsContent value="education" className="mt-6 space-y-6">
                 <Card>

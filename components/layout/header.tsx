@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -56,8 +57,8 @@ export default function Header() {
               key={item.href}
               href={item.href}
               className={`relative text-sm font-medium transition-colors hover:text-primary ${pathname === item.href
-                  ? "text-primary"
-                  : "text-muted-foreground"
+                ? "text-primary"
+                : "text-muted-foreground"
                 }`}
             >
               {item.name}
@@ -103,8 +104,8 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className={`px-2 py-1.5 text-sm font-medium rounded-md ${pathname === item.href
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                    ? "bg-primary/10 text-primary"
+                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
                     }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >

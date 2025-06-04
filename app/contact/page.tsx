@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -35,7 +36,7 @@ type FormValues = z.infer<typeof formSchema>;
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -48,7 +49,7 @@ export default function ContactPage() {
 
   const onSubmit = (data: FormValues) => {
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
@@ -84,8 +85,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-medium">Email</h4>
-                      <a 
-                        href="mailto:komalkshirasagar32009@gmail.com" 
+                      <a
+                        href="mailto:komalkshirasagar32009@gmail.com"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         komalkshirasagar32009@gmail.com
@@ -98,8 +99,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-medium">Phone</h4>
-                      <a 
-                        href="tel:+918080211162" 
+                      <a
+                        href="tel:+918080211162"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
                         +91-8080211162
@@ -122,8 +123,8 @@ export default function ContactPage() {
                 <div className="mt-8">
                   <h4 className="font-medium mb-3">Follow Me</h4>
                   <div className="flex gap-4">
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="rounded-full bg-muted p-2.5 text-muted-foreground hover:bg-primary hover:text-white transition-colors"
                       aria-label="GitHub"
                     >
@@ -142,8 +143,8 @@ export default function ContactPage() {
                         <path d="M9 18c-4.51 2-5-2-7-2" />
                       </svg>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="rounded-full bg-muted p-2.5 text-muted-foreground hover:bg-primary hover:text-white transition-colors"
                       aria-label="LinkedIn"
                     >
@@ -163,8 +164,8 @@ export default function ContactPage() {
                         <circle cx="4" cy="4" r="2" />
                       </svg>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="rounded-full bg-muted p-2.5 text-muted-foreground hover:bg-primary hover:text-white transition-colors"
                       aria-label="Twitter"
                     >
@@ -182,8 +183,8 @@ export default function ContactPage() {
                         <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                       </svg>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       className="rounded-full bg-muted p-2.5 text-muted-foreground hover:bg-primary hover:text-white transition-colors"
                       aria-label="Instagram"
                     >
@@ -217,7 +218,7 @@ export default function ContactPage() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
-                
+
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField
@@ -266,10 +267,10 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Message</FormLabel>
                           <FormControl>
-                            <Textarea 
-                              placeholder="Your message" 
-                              className="min-h-[120px]" 
-                              {...field} 
+                            <Textarea
+                              placeholder="Your message"
+                              className="min-h-[120px]"
+                              {...field}
                             />
                           </FormControl>
                           <FormMessage />

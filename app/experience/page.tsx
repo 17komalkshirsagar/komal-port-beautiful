@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { BriefcaseIcon, Calendar } from "lucide-react";
+import React from "react";
 
 import SectionHeading from "@/components/ui/section-heading";
 import { Card, CardContent } from "@/components/ui/card";
